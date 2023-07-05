@@ -20,7 +20,6 @@
    
 <header id="main-header" class="main-header">
  <section class="navbar-facturartemis">
-      <img src="img/facturartemis.png" class="logo" alt="Logo" />
       <nav class="navbar-general">
         <a href="index.html">Categorias</a>
         <a href="#">Productos</a>
@@ -30,7 +29,6 @@
 	   
         <a href="#">Facturas</a>
       </nav>
-      <button class="btn-consultas bg-verde">Consultas</button>
 </section>
 </header>
    
@@ -70,32 +68,24 @@
             ></button>
           </div>
           <div class="modal-body ">
-            <form id="formulario" class="form-select-lg mb-3" method="POST">
-           
+            <form id="insertFormulario">
               <div class="mb-3">
                 <label for="CategoriaNombre" class="col-form-label">Categoria Nombre:</label>
-                <input type="text" class="form-control formTam" id="CategoriaNombre" />
+                <input type="text" class="form-control formTam" id="name" />
               </div>
              
               <div class="mb-3">
                 <label for="Descripcion" class="col-form-label">Descripcion:</label>
-                <input type="text" class="form-control formTam" id="Descripcion" />
+                <input type="text" class="form-control formTam" id="description" />
               </div>
 
               <div class="mb-3">
                 <label for="Imagen" class="col-form-label">Imagen:</label>
-                <input type="text" class="form-control formTam" id="Imagen" />
+                <input type="text" class="form-control formTam" id="image" />
               </div>
-
           </div>
           <div class="modal-footer">
-            <button
-              type="button"
-              class="btn btn-secondary btn-lg"
-              data-bs-dismiss="modal"
-            >
-              Close
-            </button>
+            <button type="button"class="btn btn-secondary btn-lg"data-bs-dismiss="modal">Close</button>
             <button type="submit" class="btn btn-primary btn-lg">Guardar</button>
           </div>
         </form>
@@ -174,6 +164,8 @@
             <th>CategoriaNombre</th>
             <th>Descripcion</th>
             <th>Imagen</th>
+            <th>delete</th>
+            <th>update</th>
             
 
           </tr>
@@ -190,7 +182,6 @@
         <div class="container">
             <div class="col">
                 <p class=" text-center pie">
-                    Copyright &copy;<img src="img/facturartemis.png" class="logo" alt="Logo" />
                 </p>
             </div>
         </div>
