@@ -29,8 +29,8 @@ export const nuevaCategoria = async (categoria) => {
 
 export const deleteCategory = async (id) => {
     try {
-        await fetch(`${url},${id}`,{
-            method:'POST',
+        await fetch(`${url}/${id}`,{
+            method:'DELETE',
             headers:{
                 'Content-Type':'application/json'
             }
@@ -46,7 +46,7 @@ export const deleteCategory = async (id) => {
 export const editarCategory = async (category,id) => {
     try {
         await fetch(`${url}/${id}`,{
-            method:'POST',
+            method:'PUT',
             body:JSON.stringify(category),
             headers:{
                 'Content-Type':'application/json'

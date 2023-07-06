@@ -19,19 +19,19 @@ async function cargaClientes(){
         <td>${Descripcion}</td>
         <td>${Imagen}</td>
         <td> <button class="btn btn-danger delete" id="${CategoriaID}">Delete</button></td>
-        <td><button type="button" class="btn btn-warning update" id=""${CategoriaID} data-bs-toggle="modal" data-bs-target="#exampleModal">update</button></td>
+        <td><button type="button" class="btn btn-warning update" data-bs-toggle="modal" id="${CategoriaID}"  data-bs-target="#exampleModal" data-bs-whatever="@getbootstrap" >update</button></td>
       </tr>
       `
     })
 }
 
 tablaClientes.addEventListener('click',(e)=>{
-    if(e.target.classlist.contains('delete')){
+    if(e.target.classList.contains('delete')){
         const id=e.target.getAttribute('id');
         borrar(id);
-    }else if(e.target.classlist.contains('update')){
+    }else if(e.target.classList.contains('update')){
         const id=e.target.getAttribute('id');
-        getCategoria(id);
+        editarCategory(id);
     }
 })
 
@@ -39,7 +39,7 @@ const borrar=(id)=>{
     const confir = confirm("desea eliminarlo");
     if(confir){
         console.log("uno");
-        delet(id);
+        deleteCategory(id);
     }
 }
 
@@ -82,10 +82,18 @@ function validation(Objecto){
 
 //EDITAR CATEGORIA - CRUD (U)
 
-/* alert("todos los datos son obligatorios")
+const getCliente=async(id)=>{
+    const data=await categoria(id);
+    const {CategoriaID ,CategoriaNombre, Descripcion ,Imagen} =data[0];
+    console.log(data);
+    console.log(CategoriaID);
+    document.querySelector('#idUpdate')
+    document.querySelector('#CategoriaNombreUpdate')
+    document.querySelector('#DescripcionUpdate')
+    document.querySelector('#ImagenUpdate')
 
-        return nuevaCategoria(categoria);
+}
 
- */
+
 
 

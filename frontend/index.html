@@ -95,29 +95,51 @@
   </section>
 
     <!-- modal crear Categoria final -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Editar Categoria</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form id="formularioUpdate">
+          <div class="mb-3">
+            <label for="CategoriaNombre" class="col-form-label">Categoria Nombre:</label>
+            <input type="text" class="form-control formTam" id="CategoriaNombreUpdate" />
+          </div>
+         
+          <div class="mb-3">
+            <label for="Descripcion" class="col-form-label">Descripcion:</label>
+            <input type="text" class="form-control formTam" id="DescripcionUpdate" />
+          </div>
+
+          <div class="mb-3">
+            <label for="Imagen" class="col-form-label">Imagen:</label>
+            <input type="text" class="form-control formTam" id="ImagenUpdate" />
+          </div>
+          <input id="idUpdate" name="idUpdate" type="hidden" value="">
+          <button type="submit" class="btn btn-dark update" data-bs-dismiss="modal">Submit</button>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Send message</button>
+      </div>
+    </div>
+  </div>
+</div>
 
     <!-- MODAL UPDATE INI-->
-    <div
-    class="modal fade"
-    id="updateCategory"
-    tabindex="-1"
-    aria-labelledby="exampleModalLabel"
-    aria-hidden="true"
-  >
+    <!-- <div class="modal fade"id="updateCategory"tabindex="-1"aria-labelledby="exampleModalLabel"aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header bg-primary text-white">
           <h2 class="modal-title" id="exampleModalLabel">Actualizar Categoria</h2>
-          <button
-            type="button"
-            class="btn-close"
-            data-bs-dismiss="modal"
-            aria-label="Close"
-          ></button>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">asdasddas</button>
         </div>
         <div class="modal-body">
-          <form id="formularioUpdate" class="form-select-lg mb-3" method="POST">
-           
+          <form id="formularioUpdate">
             <div class="mb-3">
               <label for="CategoriaNombre" class="col-form-label">Categoria Nombre:</label>
               <input type="text" class="form-control formTam" id="CategoriaNombreUpdate" />
@@ -134,22 +156,16 @@
             </div>
 
             <input id="idUpdate" name="idUpdate" type="hidden" value="">
-         
+            <button type="submit" class="btn btn-dark update" data-bs-dismiss="modal">Submit</button>
         </div>
         <div class="modal-footer">
-          <button
-            type="button"
-            class="btn btn-secondary btn-lg"
-            data-bs-dismiss="modal"
-          >
-            Close
-          </button>
+          <button type="button" class="btn btn-secondary btn-lg" data-bs-dismiss="modal">Close</button>
           <button type="submit" class="btn btn-primary btn-lg">Actualizar</button>
         </div>
       </form>
       </div>
     </div>
-  </div>
+  </div> -->
 </section>
     <!-- MOdAL UPDATE FIN -->
     
